@@ -1,0 +1,167 @@
+/* GENERAL STYLE */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Karla", arial;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/* COLORS */
+/* MIXIN */
+/* CONTAINER */
+.container {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #e5eff5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .card {
+  max-width: 650px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.container .card .car-header {
+  padding: 35px;
+}
+.container .card .car-header h1 {
+  color: #2ab2af;
+  font-weight: 700;
+}
+.container .card .car-header h2 {
+  color: #c0df34;
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: 700;
+}
+.container .card .car-header p {
+  margin-top: 10px;
+  line-height: 30px;
+  color: #98a6bd;
+}
+.container .card .card-body {
+  width: 100%;
+  display: flex;
+}
+.container .card .card-body .subcripcion {
+  width: 50%;
+  width: 50%;
+  padding: 35px;
+  background-color: #2ab2af;
+  color: #fff;
+  border-radius: 0px 0px 0px 5px;
+}
+.container .card .card-body .subcripcion h2 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.container .card .card-body .subcripcion .precio {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.container .card .card-body .subcripcion .precio h3 {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.container .card .card-body .subcripcion .precio p {
+  color: #ccc;
+}
+.container .card .card-body .subcripcion span {
+  display: inline-block;
+  margin-top: 5px;
+}
+.container .card .card-body .subcripcion a {
+  width: 100%;
+  padding: 17px;
+  border-radius: 5px;
+  margin-top: 40px;
+  text-align: center;
+  background-color: #c0df34;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+.container .card .card-body .acerca-de {
+  width: 50%;
+  padding: 35px;
+  background-color: #1cc4c2;
+  color: #fff;
+  border-radius: 0px 0px 5px 0px;
+}
+.container .card .card-body .acerca-de h2 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.container .card .card-body .acerca-de ul {
+  list-style: none;
+  line-height: 20px;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    height: 100%;
+    padding: 20px;
+  }
+  .container .card {
+    width: 80%;
+  }
+  .container .card .card-body {
+    flex-direction: column;
+  }
+  .container .card .card-body .subcripcion {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .container .card .card-body .acerca-de {
+    width: 100%;
+    border-radius: 0px 0px 5px 5px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .container {
+    padding: 2px;
+  }
+  .container .card .car-header {
+    padding: 15px;
+  }
+  .container .card .car-header h1 {
+    font-size: 16px;
+  }
+  .container .card .car-header h2 {
+    font-size: 12px;
+  }
+  .container .card .car-header p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .container .card .card-body .subcripcion {
+    padding: 15px;
+  }
+  .container .card .card-body .acerca-de {
+    padding: 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

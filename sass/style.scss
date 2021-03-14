@@ -1,0 +1,223 @@
+/* GENERAL STYLE */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Karla", arial;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+/* COLORS */
+
+$cyan:hsl(179, 62%, 43%);
+$cyan-water:hsl(179, 75%, 44%);
+$Bright-Yellow:hsl(71, 73%, 54%);
+$Light-Gray:hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+
+/* MIXIN */
+
+@mixin style-carbody($color) {
+    width: 50%;
+    padding: 35px;
+    background-color: $color;
+    color: #fff;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: $Light-Gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .card {
+        max-width: 650px;
+        border-radius: 5px;
+        background-color: #fff;
+
+        .car-header {
+            padding: 35px;
+
+            h1 {
+                color: $cyan;
+                font-weight: 700;
+            }
+
+            h2 {
+                color: $Bright-Yellow;
+                font-size: 18px;
+                margin-top: 20px;
+                font-weight: 700;
+            }
+
+            p {
+                margin-top: 10px;
+                line-height: 30px;
+                color: $Grayish-Blue;
+            }
+
+        }
+
+        .card-body {
+            width: 100%;
+            display: flex;
+
+            .subcripcion {
+                width: 50%;
+                @include style-carbody($cyan);
+                border-radius: 0px 0px 0px 5px;
+
+                h2 {
+                    font-size: 16px;
+                    margin-top: 10px;
+                }
+
+                .precio {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 25px;
+
+                    h3 {
+                        font-size: 30px;
+                        margin-right: 10px;
+                    }
+
+                    p {
+                        color: #ccc;
+                    }
+                }
+
+                span {
+                    display: inline-block;
+                    margin-top: 5px;
+                }
+
+                a {
+                    width: 100%;
+                    padding: 17px;
+                    border-radius: 5px;
+                    margin-top: 40px;
+                    text-align: center;
+                    background-color: $Bright-Yellow;
+                    display: block;
+                    text-decoration: none;
+                    color: #fff;
+                    font-weight: 700
+                }
+            }
+
+            .acerca-de {
+                @include style-carbody($cyan-water);
+                border-radius: 0px 0px 5px 0px;
+
+                h2 {
+                    font-size: 16px;
+                    margin-top: 10px;
+                }
+
+
+                ul {
+                    list-style: none;
+                    line-height: 20px;
+                    font-size: 14px;
+                    margin-top: 20px;
+                    color: #fff;
+                    font-weight: 200;
+                    letter-spacing: 0.5px;
+                }
+
+            }
+        }
+    }
+
+
+}
+
+@media only screen and(max-width:960px) {
+
+    .container {
+        height: 100%;
+        padding: 20px;
+
+        .card {
+            width: 80%;
+
+            .card-body {
+                flex-direction: column;
+
+                .subcripcion {
+                    width: 100%;
+                    border-radius: 0px;
+                  
+
+                }
+
+                .acerca-de {
+                    width: 100%;
+                    border-radius: 0px 0px 5px 5px;
+
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:540px) {
+
+    .container {
+        padding: 2px;
+
+        .card {
+            .car-header {
+                padding: 15px;
+                h1 {
+                    font-size: 16px;
+                }
+
+                h2 {
+                    font-size: 12px;
+                }
+
+                p {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+
+            .card-body {
+
+
+                .subcripcion {
+
+                  padding: 15px;
+
+                }
+
+                .acerca-de {
+                    padding: 15px;
+                }
+
+            }
+        }
+    }
+}
